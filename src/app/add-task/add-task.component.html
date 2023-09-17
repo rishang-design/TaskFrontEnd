@@ -1,0 +1,29 @@
+<div class="container">
+    <h3 style=color:red>Add Task</h3>
+        <form  class="registerForm" (ngSubmit)="addTaskDetails()">
+            <div class="mb-3">
+                <label for="example" class="form-label">Id</label>
+                <input   type="text" class="form-control" id="id" name="id" [(ngModel)]="tasks.id" >
+            </div>
+            <div class="mb-3">
+                <label for="example" class="form-label">Title</label>
+                <input  type="text" class="form-control" id="title" name="title" [(ngModel)]="tasks.title">
+            </div>
+            <div class="mb-3">
+                <label for="example" class="form-label" >Description</label>
+                <input   type="text" class="form-control" id="description" name="description" [(ngModel)]="tasks.description">
+            </div>
+            <div class="mb-3">
+                <label for="example" class="form-label">Status</label>
+                <input type="text" class="form-control" id="status" name="status" [(ngModel)]="tasks.status">
+            </div>
+           
+            <button type="submit" class="btn btn-primary" (click)="onSubmit()" >Submit</button>&nbsp;
+            
+            <button type="reset" class="btn btn-danger" >Reset</button>
+
+        </form>
+        
+</div>
+
+

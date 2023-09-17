@@ -1,0 +1,29 @@
+<div class="container">&nbsp;
+    <div class="col-md-10">
+        <table class="col-md-10">
+            <div class="table table-success table-stripped">
+                <thead class="col-mb-10">
+                    <tr >
+                        <th>Id</th>
+                        <th>Title</th>
+                        <th>Description</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                        <th>Action</th>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let task of tasks">
+                        <td>{{task.id}}</td>
+                        <td>{{task.title}}</td>
+                        <td>{{task.description}}</td>
+                        <td>{{task.status}}</td>
+                        <td><button (click)="onUpdate(task.id)" class="btn btn-info">Update</button></td>
+                        <button (click)= "deleteTaskDetails(task.id)" class="btn btn-danger" style="margin-left: 10px;">Delete</button>
+                    </tr>
+                </tbody>
+            </div>
+        </table>
+    </div>
+</div>
